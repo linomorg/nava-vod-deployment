@@ -1,0 +1,15 @@
+{
+    "availableServers": [{
+            "hostname": "dl.navaapp.com",
+            "load": 10,
+            "key": 0,
+            "health_check_uri": "media/health_check",
+            "base_path": "media/"
+        }
+    ],
+    "defaultServers": [{
+        "hostname": "dl.navaapp.com",
+        "load": 10,
+        "relatedKey": 0
+    }]
+}

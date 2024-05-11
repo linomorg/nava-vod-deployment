@@ -1,0 +1,26 @@
+version: "3.3"
+services:
+    app:
+        image: navaapp.registry.com/load-balancer
+        networks:
+            - traefik-public
+        volumes:
+            - /var/data/config/load-balancer/servers.json:/app/servers.json
+        deploy:
+            labels:
+                - traefik.enable=true
+                - traefik.docker.network=traefik-public
+                - traefik.constraint-label=traefik-public
+                - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
+                - traefik.http.middlewares.https-redirect.redirectscheme.permanent=true
+                - traefik.http.routers.balancer-https.rule=Host(`BALANCER_DOMAIN?Variable not set`)
+                - traefik.http.routers.balancer-https.entrypoints=https
+                - traefik.http.routers.balancer-http.rule=Host(`BALANCER_DOMAIN?Variable not set`)
+                - traefik.http.routers.balancer-http.entrypoints=http
+                - traefik.http.routers.balancer-http.middlewares=https-redirect
+                - traefik.http.services.balancer.loadbalancer.server.port=3000
+                - traefik.http.routers.balancer-https.tls=true
+                - traefik.http.routers.balancer-https.tls.certresolver=le
+networks:
+    traefik-public:
+        external: true
