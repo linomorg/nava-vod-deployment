@@ -19,9 +19,9 @@ services:
                 - traefik.constraint-label=traefik-public
                 - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
                 - traefik.http.middlewares.https-redirect.redirectscheme.permanent=true
-                - traefik.http.routers.encoder-https.rule=Host(`ENCODER_DOMAIN?Variable not set`)
+                - traefik.http.routers.encoder-https.rule=Host(`${ENCODER_DOMAIN?Variable not set}`)
                 - traefik.http.routers.encoder-https.entrypoints=https
-                - traefik.http.routers.encoder-http.rule=Host(`ENCODER_DOMAIN?Variable not set`)
+                - traefik.http.routers.encoder-http.rule=Host(`${ENCODER_DOMAIN?Variable not set}`)
                 - traefik.http.routers.encoder-http.entrypoints=http
                 - traefik.http.routers.encoder-http.middlewares=https-redirect
                 - traefik.http.services.encoder.loadbalancer.server.port=3000
