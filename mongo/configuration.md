@@ -8,7 +8,7 @@ We need to insert haji-encoder settings into database using [js file](./data/ins
 
 #### where to modify ?
 
-- modify `webhooks[0,1,2].secret` field (navaapp secrets)
+- (OPTIONAL: for webhook usage) modify `webhooks[0,1,2].secret` field (navaapp secrets) 
 - modify `destinationServers[0].s3Config.accessKeyId` field (you have generated this before)
 - modify `destinationServers[0].s3Config.secretAccessKey` (you have generated this before)
 
