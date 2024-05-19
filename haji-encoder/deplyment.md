@@ -51,8 +51,13 @@ export MONGO_DATABASE=hajiEncoder
 export MONGO_USER=haji
 export MONGO_PASSWORD=changethis 
 ```
+- Create ```haji-encoder.env``` and copy and modify from [env file](haji-encoder.env).
 
-- Modify encoder [env file](haji-encoder.env) and copy it in config directory
+```bash
+vim ./haji-encoder.env
+```
+
+- Then copy [env file](haji-encoder.env) file in the below directory.
 
 ```bash
 cp ./haji-encoder.env /var/data/config/haji-encoder/haji-encoder.env
