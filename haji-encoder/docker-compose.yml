@@ -1,7 +1,7 @@
 version: "3.3"
 services:
     encoder:
-        image: navaapp.registry.com/haji-encoder
+        image: navaapp.registry.com/nava-encoder
         networks:
             - net
             - traefik-public
