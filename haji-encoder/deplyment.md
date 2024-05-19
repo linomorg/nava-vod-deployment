@@ -95,4 +95,4 @@ docker service logs haji-encoder_encoder
 ```
 
 - You can access haji-encoder swagger documentation at:
-`https://encoder.navaapp.com/docs`
+`https://encoder.navaapp.com`
