@@ -7,6 +7,17 @@
 ```bash
 git clone  git@gitlab.navaapp.com:/vod/haji-encoder.git encoder
 ```
+- make sure you are login to your registry for example registry.navaapp.com
+```bash
+$ docker login registry.navaapp.com
+```
+
+```bash
+cd ./encoder && \
+docker build . -t registry.navaapp.com/haji-encoder && \
+docker push registry.navaapp.com/haji-encoder
+```
+
 
 - build and push the image with:
 
