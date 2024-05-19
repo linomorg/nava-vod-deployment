@@ -2,19 +2,23 @@
 
 ## Preparation
 
-- Create minio data directory and [env file](minio.env) with this command and modify env configuration based on your needs:
+- Create minio data directory:
 
 ```bash
-mkdir -p /var/data/minio && cp minio.env /var/data/config/minio/minio.env
+mkdir -p /var/data/minio && mkdir -p /var/data/config/minio
 ```
 
-- Create an environment variable with the domain you want to use for the Public S3 Api:
+- in the ```/var/data/config/minio``` directory, create a file named ```minio.env``` and use the [env file](minio.env) to fill your ```minio.env```.
+  
+- NOTE: you should change the ```MINIO_BROWSER_REDIRECT_URL``` with your server IP, but keep the ```9001``` port. e.g.: http://YOUR.SERVER.IP.HERE:9001
 
-```bash
-export MINIO_DOMAIN=dl.navaapp.com
-```
+- Create a domain you want to use for the Public S3 Api, for example: dl.navaapp.com
 
-- Finally We need to use [docker-compose.yml](./docker-compose.yml) file to deploy minio.
+- Finally We need to use [docker-compose.yml](./docker-compose.yml) file to deploy minio. Create the [docker-compose.yml](./docker-compose.yml) in the ```/var/data/minio``` directory.
+- NOTE: you have to replace the \<\<\<your minio domain without http or https\>\>\> in the [docker-compose.yml](./docker-compose.yml) file with your minio domain.
+- NOTE: There are 2 replacements in the [docker-compose.yml](./docker-compose.yml) file you need to replace
+- for example: dl.navaapp.com.
+- NOTE: YOU SHOULD REMOVE THE HTTPS OR HTTP FROM THE DOMAIN. ONLY WRITE THE DOMAIN.
 
 ## Deploy it
 
