@@ -49,6 +49,24 @@ Just enter the following command to create a manager node
 
 ```docker swarm init```
 
+## Change Registry to Iran Server (or other prefered registry)
+
+Write ```vim /etc/docker/daemon.json``` and add this code in it:
+
+```bash
+{
+  "registry-mirrors": ["https://docker.iranserver.com"]
+}
+```
+
+Then restart the docker service with these commands:
+
+```bash
+systemctl daemon-reload
+systemctl restart docker
+```
+
+
 ## Deployment steps
 
 In each directory of this repository, we have documentation for deploying each service
