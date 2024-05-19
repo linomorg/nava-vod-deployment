@@ -3,8 +3,8 @@ const settings = [
   {
     _id:  new ObjectId(),
     default: true,
-    webHooks: [
-      {
+    webHooks:  [ /*
+      { 
         secret: "PUT_YOUR_SECRET",
         secretHeaderKey: "authorization",
         method: "GET",
@@ -48,7 +48,7 @@ const settings = [
           $date: "2022-08-15T06:57:17.506Z",
         },
       },
-    ],
+          */] ,
     destinationServers: [
       {
         _id:  new ObjectId(),
@@ -82,7 +82,7 @@ const settings = [
 const apikeys = [
   {
     _id:  new ObjectId(),
-    key: "ca756d59ea3393cd1e2cc8aa793d0688d48a01a88fcbfee7d94c733c6dea2b2b",
+    key: "eb94bbb01578b04a699ec42217432a30e7b330309e700e30b14d362db03c909a",
     createdAt: {
       $date: "2022-07-27T06:38:49.973Z",
     },
