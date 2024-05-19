@@ -17,8 +17,8 @@ $ docker login registry.navaapp.com
 
 ```bash
 cd ./encoder && \
-docker build . -t registry.navaapp.com/haji-encoder && \
-docker push registry.navaapp.com/haji-encoder
+docker build . -t registry.navaapp.com/nava-encoder && \
+docker push registry.navaapp.com/nava-encoder
 ```
 
 ## Preparation
