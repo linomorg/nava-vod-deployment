@@ -27,10 +27,10 @@ services:
         - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
         - traefik.http.middlewares.https-redirect.redirectscheme.permanent=true
 
-        - traefik.http.routers.minio-https.rule=Host(`${MINIO_DOMAIN?Variable not set}`)
+        - traefik.http.routers.minio-https.rule=Host(`<<<your minio domain without http or https>>>`)
         - traefik.http.routers.minio-https.entrypoints=https
           #- traefik.http.routers.minio-https.service=minio
-        - traefik.http.routers.minio-http.rule=Host(`${MINIO_DOMAIN?Variable not set}`)
+        - traefik.http.routers.minio-http.rule=Host(`<<<your minio domain without http or https>>>`)
         - traefik.http.routers.minio-http.entrypoints=http
         - traefik.http.routers.minio-http.middlewares=https-redirect
           #- traefik.http.routers.minio-http.service=minio
