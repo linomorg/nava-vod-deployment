@@ -57,4 +57,10 @@ db.settings.find()
 
 you should see the settings array printed
 
+this is your unhashed apikey:
+
+```506df047112944608fda10988738234f```
+
+you should use it for hajiEncoder authorization in swagger and other authorizations you might need.
+
 Done!
