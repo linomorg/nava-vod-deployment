@@ -59,6 +59,7 @@ const settings = [
           endpoint: "https://dl.navaapp.com",
           accessKeyId: "PUT_ACCESS_KEY_ID",
           secretAccessKey: "PUT_SECRET_ACCESS_KEY",
+          s3ForcePathStyle: true,
           bucketName: "media",
           regionName: null,
         },
