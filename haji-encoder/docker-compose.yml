@@ -43,7 +43,7 @@ services:
         networks:
             - net
     mongodb:
-        image: registry.linom.org/mongo:4.4.6
+        image: mongo:4.4.6
         environment:
             - MONGO_INITDB_DATABASE=${MONGO_DATABASE}
             - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
