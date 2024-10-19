@@ -59,4 +59,4 @@ Use minio console:
 - create a bucket name "media"
 - set it public (by default buckets is private)
 - generate "access key" and "secret access key" (we will use it later)
-- create an empty file in that bucket named "health-check"
+- create an empty file in that bucket named "healthـcheck"
